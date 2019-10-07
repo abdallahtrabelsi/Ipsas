@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">activity</string>
+    <string name="r_m_d_p">R.M.D.P</string>
+    <string name="mon_compte">mon compte</string>
+    <string name="demande_de_papier">demande de papier</string>
+    <string name="actualit">actualité</string>
+    <string name="menu">Menu:</string>
+    <string name="login">login:</string>
+    <string name="app">Spinner</string>
+    <string-array name="terms">
+        <item>Attestation de présence</item>
+        <item>Attestation d\'inscription</item>
+        <item>Carte Etudiant</item>
+        <item>Facture</item>
+    </string-array>
+</resources>

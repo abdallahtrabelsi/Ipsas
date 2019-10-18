@@ -17,9 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn;
     private Button quite;
     private EditText mdp;
-//utilisateur cl_utilisateur=new utilisateur();
-
-    private TextView log;
+    private EditText log;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         quite =findViewById(R.id.close);
 
 
-        //noinspection deprecation
+
         btn.setOnClickListener(new View.OnClickListener( ) {
             @Override
             public void onClick(View v) {
@@ -39,11 +37,12 @@ public class MainActivity extends AppCompatActivity {
 
                     AlertDialog.Builder boite = new AlertDialog.Builder(MainActivity.this,R.style.alert);
                     boite.setTitle("Donner Un Login et Mot De Passe !");
-                    // boite.setIcon(R.drawable.ghh);
+
                     boite.setMessage("");
                     boite.setPositiveButton("retry", new DialogInterface.OnClickListener( ) {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {}
+
 
                             }
 
@@ -52,8 +51,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
                 else {
+                    String str = log.getText().toString();
+                    String password = mdp.getText().toString();
+
                     Intent t = new Intent(MainActivity.this, SecondActivity.class);
-                   // t.putExtra("login","");
+
+
+                    t.putExtra("message_key", str);
+                    t.putExtra("message_key_Password", password);
+
+
                     startActivity(t);
 
 
@@ -71,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         quite.setOnClickListener(new View.OnClickListener( ) {
             @Override
             public void onClick(View v) {
+
                 finish();
                 System.exit(0);
             }

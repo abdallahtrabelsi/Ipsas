@@ -80,7 +80,7 @@
         android:layout_marginTop="553dp"
         android:background="#1111"
         android:text="Quite"
-        android:textColor="#ED090929" />
+        android:textColor="#ED090929" tools:targetApi="lollipop"/>
 
     <EditText
         android:id="@+id/log3"
@@ -94,7 +94,7 @@
         android:layout_marginRight="38dp"
         android:background="#11000000"
         android:ems="20"
-        android:hint="Enter Your Lggin"
+        android:hint="Enter Your Login"
         android:inputType="textPersonName" />
 
     <ImageView
